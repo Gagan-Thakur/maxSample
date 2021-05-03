@@ -1,0 +1,461 @@
+<app-header></app-header>
+<div id="profile-section">
+    <!-- <div class="browser-listing-bg">
+        <div class="container">
+            <div class="main-heading-section">
+                <h1 class="title">Apply Job</h1>
+                <p class="sub-title">Home | Browse Jobs</p>
+            </div>
+        </div>
+    </div> -->
+    <div class="main-listing container-fluid">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <mat-tab-group [@.disabled]="true" >
+                            <mat-tab>
+                                <ng-template mat-tab-label>
+                                    <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;My Profile
+                                </ng-template>
+                                <div class="right-content">
+                                    <div class="top-content">
+                                        <span>Last refersh date : Friday, 4th Apr 2021</span>
+                                        <span class="upload"><i class="fa fa-upload" aria-hidden="true"></i> Upload Resume</span>
+                                    </div>
+                                    <div class="hr"></div>
+                                    <div class="mt-4">
+                                        <span class="title">About Me</span>
+                                        <span class="snapshot">Take a snapshot</span>
+                                    </div>
+                                    <div class="row form-input mt-4">
+                                        <div class="col-md-4">
+                                            <label class="mendatory">First Name</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="">Middle Name</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label class="">Last Name</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Fathers Name</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Date of birth</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label class="mendatory">Marital Status</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Email Id</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Mobile Number</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label class="">Alternate Mobile Number</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Category</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Adhaar Number</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label class="">Pan Card Number</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Gender</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Blood Group</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label class="">Domicile State</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-explore">Edit Profile</button>
+                                            <button class="btn btn-grey">Update Profile</button>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="right-content">
+                                    <div class="mt-4">
+                                        <span class="title">Education details</span>
+                                    </div>
+                                    <div class="row form-input mt-4">
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Course</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="">Start Month</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label class="mendatory">Start year</label>
+                                            <select class="form-control">
+                                                <option selected>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">End Month</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">End Year</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Regular/Correspondense</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Result Status</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Obtained Marks</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Total Marks</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Passing %</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Name of School</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-6 form-group">
+                                            <label class="mendatory">School Location</label>
+                                            <select class="form-control">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label class="mendatory">Board</label>
+                                            <select class="form-control">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-explore">Add Education</button>
+                                            <button class="btn btn-grey">Update Education</button>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="right-content">
+                                    <div class="mt-4">
+                                        <span class="title">Professional Skills</span>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-6 form-group">
+                                            <label class="mendatory">Skills</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-6 form-group">
+                                            <label class="mendatory">Proficiency level (%)</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-explore">Add Skills</button>
+                                            <button class="btn btn-grey">Update Skills</button>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="right-content">
+                                    <div class="mt-4">
+                                        <span class="title">Work & Experience</span>
+                                    </div>
+                                    <div class="row form-input mt-4">
+                                        <div class="col-md-4">
+                                            <label class="mendatory">Company Name</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="">Department</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label class="mendatory">Location</label>
+                                            <select class="form-control">
+                                                <option selected>2019</option>
+                                                <option>2018</option>
+                                                <option>2017</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Nature of Job</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Salary Per Month</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Start Year</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">Start Month</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="row form-input mt-2">
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">End Month</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <label class="mendatory">End Year</label>
+                                            <input class="form-control" required>
+                                        </div>
+                                        <div class="col-md-3 mt-5 form-group">
+                                            <input type="checkbox">
+                                            <label>&nbsp;Check if as present</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-explore">Add Experience</button>
+                                            <button class="btn btn-grey">Update Experience</button>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </mat-tab>
+                            <mat-tab>
+                                <ng-template mat-tab-label>
+                                    <i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;My Applied Jobs
+                                </ng-template>
+                                <div class="right-content">
+                                    <div class="top-content">
+                                        <span>Last refersh date : Friday, 4th Apr 2021</span>
+                                        <span class="upload"><i class="fa fa-upload" aria-hidden="true"></i> Upload Resume</span>
+                                    </div>
+                                    <div class="hr"></div>
+                                    <div class="col">
+                                        <div class="row job-list-section">
+                                            <div class="col mt-4 mb-4">
+                                                <p class="title">Showing 34 job</p>
+                                            </div>
+                                            <div class="col mt-4 mb-4 fiter-options text-right">
+                                                <span><i class="fa fa-history fa-purple" aria-hidden="true"></i> Fulltime</span>
+                                                <span><i class="fa fa-list-alt fa-purple" aria-hidden="true"></i> Contactual</span>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitchesDetails">
+                                                    <label class="custom-control-label" for="customSwitchesDetails">Details</label>
+                                                </span>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitchesSalary" checked>
+                                                    <label class="custom-control-label" for="customSwitchesSalary">Salary</label>
+                                                </span>
+                                                <span class="filter-list"><i class="fa fa-filter" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row job-card">
+                                            <div class="col-4">
+                                                <div class="inline">
+                                                    <img src="assets/icons/g-logo.png" class="comp-logo" alt="Account" width="40px">
+                                                </div>
+                                                <div class="inline">
+                                                    <span class="profile">Quality Engineer Fresher</span><br>
+                                                    <span class="job-type">Pooja Forge | Full Time</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 no-padding text-center">
+                                                <label>50,000 - 60,000</label>
+                                            </div>
+                                            <div class="col-3 no-padding text-center">
+                                                <label>Gurgaon | Haryana</label>
+                                                <span>Location</span>
+                                            </div>
+                                            <div class="col-3 text-center no-padding">
+                                                <button type="button" class="btn btn-light btn-rouned btn-custom">Apply Now</button>
+                                                <button type="button" routerLink="/job-description" class="btn btn-light btn-rouned btn-custom">Job Description</button>
+                                            </div>
+                                        </div>
+                                        <div class="row job-card">
+                                            <div class="col-4">
+                                                <div class="inline">
+                                                    <img src="assets/icons/g-logo.png" class="comp-logo" alt="Account" width="40px">
+                                                </div>
+                                                <div class="inline">
+                                                    <span class="profile">Quality Engineer Fresher</span><br>
+                                                    <span class="job-type">Pooja Forge | Full Time</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 no-padding text-center">
+                                                <label>50,000 - 60,000</label>
+                                            </div>
+                                            <div class="col-3 no-padding text-center">
+                                                <label>Gurgaon | Haryana</label>
+                                                <span>Location</span>
+                                            </div>
+                                            <div class="col-3 text-center no-padding">
+                                                <button type="button" class="btn btn-light btn-rouned btn-custom">Apply Now</button>
+                                                <button type="button" routerLink="/job-description" class="btn btn-light btn-rouned btn-custom">Job Description</button>
+                                            </div>
+                                        </div>
+                                        <div class="row job-card">
+                                            <div class="col-4">
+                                                <div class="inline">
+                                                    <img src="assets/icons/g-logo.png" class="comp-logo" alt="Account" width="40px">
+                                                </div>
+                                                <div class="inline">
+                                                    <span class="profile">Quality Engineer Fresher</span><br>
+                                                    <span class="job-type">Pooja Forge | Full Time</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 no-padding text-center">
+                                                <label>50,000 - 60,000</label>
+                                            </div>
+                                            <div class="col-3 no-padding text-center">
+                                                <label>Gurgaon | Haryana</label>
+                                                <span>Location</span>
+                                            </div>
+                                            <div class="col-3 text-center no-padding">
+                                                <button type="button" class="btn btn-light btn-rouned btn-custom">Apply Now</button>
+                                                <button type="button" routerLink="/job-description" class="btn btn-light btn-rouned btn-custom">Job Description</button>
+                                            </div>
+                                        </div>
+                                        <div class="col text-center mb-6">
+                                            <button class="btn btn-explore">Show More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-tab>
+                            <mat-tab>
+                                <ng-template mat-tab-label>
+                                    <i class="fa fa-laptop" aria-hidden="true"></i>&nbsp;&nbsp;My Interviews
+                                </ng-template>
+                                <ng-template mat-tab-label>
+                                    <i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;My Applied Jobs
+                                </ng-template>
+                                <div class="right-content">
+                                    <div class="top-content">
+                                        <span>Last refersh date : Friday, 4th Apr 2021</span>
+                                        <span class="upload"><i class="fa fa-id-card" aria-hidden="true"></i> Download Admin Card</span>
+                                        <span class="upload"><i class="fa fa-link" aria-hidden="true"></i> Join Interview</span>
+                                    </div>
+                                    <div class="hr"></div>
+                                    <div class="col">
+                                        <div class="row job-list-section">
+                                            <div class="col mt-4 mb-4">
+                                                <p class="title">My Interview</p>
+                                            </div>
+                                            <div class="col mt-4 mb-4 fiter-options text-right">
+                                                <span><i class="fa fa-history fa-purple" aria-hidden="true"></i> Fulltime</span>
+                                                <span><i class="fa fa-list-alt fa-purple" aria-hidden="true"></i> Contactual</span>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitchesDetails">
+                                                    <label class="custom-control-label" for="customSwitchesDetails">Details</label>
+                                                </span>
+                                                <span class="custom-control custom-switch">
+                                                    <input type="checkbox" class="custom-control-input" id="customSwitchesSalary" checked>
+                                                    <label class="custom-control-label" for="customSwitchesSalary">Salary</label>
+                                                </span>
+                                                <span class="filter-list"><i class="fa fa-filter" aria-hidden="true"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row job-card">
+                                            <div class="col-4">
+                                                <div class="inline">
+                                                    <img src="assets/icons/g-logo.png" class="comp-logo" alt="Account" width="40px">
+                                                </div>
+                                                <div class="inline">
+                                                    <span class="profile">Quality Engineer Fresher</span><br>
+                                                    <span class="job-type">Pooja Forge | Full Time</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 no-padding">
+                                                <label><b>Job Code</b></label><br>
+                                                <span>Gurgaon App : 3527736</span>
+                                            </div>
+                                            <div class="col-2 no-padding">
+                                                <label><b>Interview Code</b></label><br>
+                                                <span>234566</span>
+                                            </div>
+                                            <div class="col-2 no-padding ">
+                                                <label><b>Mode: Gurgaon | Haryana</b></label>
+                                                <span>Location</span>
+                                            </div>
+                                            <div class="col-2 text-center no-padding">
+                                                <button type="button" routerLink="/job-description" class="btn btn-light btn-rouned btn-custom">Job Description</button>
+                                            </div>
+                                        </div>
+                                        <div class="col text-center mb-6">
+                                            <button class="btn btn-explore">View More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-tab>
+                            <mat-tab>
+                                <ng-template mat-tab-label>
+                                    <i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;&nbsp;My Onboarding
+                                </ng-template>
+                                Content 4
+                            </mat-tab>
+                            <mat-tab>
+                                <ng-template mat-tab-label>
+                                    <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp; My Documents
+                                </ng-template>
+                                Content 5
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,126 @@
+#browse-listing-section{
+    background: #f1f2f4;
+}
+.browser-listing-bg {
+    background-image: url("/assets/images/joblist.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main-heading-section{
+    padding: 80px 0px 100px;
+}
+.main-heading-section .title{
+    font-weight: bold;
+    font-size: 38px;
+    color: #000;
+}
+.main-heading-section .sub-title{
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 7px;
+}
+.main-listing{
+    background-color: #fff;
+    position: relative;
+    top: -40px;
+}
+.main-listing .search-section .title, .job-list-section .title{
+    font-size: 28px;
+    font-weight: bold;
+}
+.main-listing .search-section .input-group-text{
+    background: #fff;
+    height: 45px;
+    border: none !important;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.main-listing .search-section .input-group{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+.main-listing .search-section .input-group >.form-control{
+    border: 0px;
+    height: 45px;
+}
+.btn-search{
+    background: #0149d1;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 20px;
+    border: 1px solid #0149d1;
+    border-radius: 4px;
+}
+.btn-explore {
+    background: #0149d1;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 20px;
+    border: 1px solid #0149d1;
+    border-radius: 4px;
+}
+.btn-rouned {
+    color: #333;
+    border: 1px solid #d3d3d3;
+    border-radius: 35px;
+    padding: 7px 25px;
+    margin: 10px;
+    background: #fff;
+}
+.btn-rouned:focus{
+    color: #fff  !important;
+    border: 1px solid #0149d1 !important;
+    background: #0149d1 !important;
+}
+.fiter-options > span {
+    margin: 0px 10px;
+    color: grey;
+    font-weight: bold;
+}
+.fiter-options > .custom-control{
+    display: inline !important;
+}
+.fiter-options .filter-list{
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 10px;
+    color: blue;
+}
+.job-card{
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #ddd;
+    margin: 20px 0px;
+    padding: 10px 0px;
+}
+.job-card .profile{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 0px;
+    text-transform: uppercase;
+}
+.job-card .job-type{
+    font-size: 11px;
+    color: grey;
+    margin: 0px;
+}
+.job-card .comp-logo{
+    margin: 4px 8px;
+}
+.job-card .btn-custom{
+    padding: 7px 15px;
+    margin: 0px 5px;
+    font-size: 14px;
+}
+.inline{
+    display: inline-block !important;
+    vertical-align: -webkit-baseline-middle;
+}
+.fa-purple{
+    color: #8213e7 !important;
+}
+

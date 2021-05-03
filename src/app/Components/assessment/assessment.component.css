@@ -1,0 +1,78 @@
+#assessment-section{
+    background: #f1f2f4;
+}
+.assessment-bg {
+    background-image: url("/assets/images/jobdetails.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main-heading-section{
+    padding: 80px 0px 100px;
+}
+.main-heading-section .title{
+    font-weight: bold;
+    font-size: 38px;
+    color: #000;
+    line-height: 1.2;
+}
+.main-heading-section .sub-title{
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 7px;
+    line-height: 1.2;
+}
+.main-listing{
+    background-color: #fff;
+    position: relative;
+    top: -40px;
+    padding: 20px 30px;
+}
+.main-listing .search-section .title, .job-list-section .title{
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.main-listing .search-section .input-group-text{
+    background: #fff;
+    height: 45px;
+    border: none !important;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.main-listing .search-section .input-group{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+.main-listing .search-section .input-group >.form-control{
+    border: 0px;
+    height: 45px;
+}
+.btn-search{
+    background: #0149d1;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 20px;
+    border: 1px solid #0149d1;
+    border-radius: 4px;
+}
+.btn-explore {
+    background: #0149d1;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 20px;
+    border: 1px solid #0149d1;
+    border-radius: 4px;
+}
+.btn-rouned {
+    color: #333;
+    border: 1px solid #d3d3d3;
+    border-radius: 35px;
+    padding: 7px 25px;
+    margin: 10px;
+    background: #fff;
+}

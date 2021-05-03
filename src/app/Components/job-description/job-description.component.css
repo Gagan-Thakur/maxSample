@@ -1,0 +1,205 @@
+#browse-listing-section{
+    background: #f1f2f4;
+}
+.browser-listing-bg {
+    background-image: url("/assets/images/jobdetails.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    height: auto;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main-heading-section{
+    padding: 80px 0px 100px;
+}
+.main-heading-section .title{
+    font-weight: bold;
+    font-size: 38px;
+    color: #000;
+    line-height: 1.2;
+}
+.main-heading-section .sub-title{
+    font-size: 22px;
+    color: #000;
+    margin-bottom: 7px;
+    line-height: 1.2;
+}
+.main-listing{
+    background-color: #fff;
+    position: relative;
+    top: -40px;
+    padding: 20px 30px;
+}
+.main-listing .search-section .title, .job-list-section .title{
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.main-listing .search-section .input-group-text{
+    background: #fff;
+    height: 45px;
+    border: none !important;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.main-listing .search-section .input-group{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+.main-listing .search-section .input-group >.form-control{
+    border: 0px;
+    height: 45px;
+}
+.btn-search{
+    background: #0149d1;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 20px;
+    border: 1px solid #0149d1;
+    border-radius: 4px;
+}
+.btn-explore {
+    background: #0149d1;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 20px;
+    border: 1px solid #0149d1;
+    border-radius: 4px;
+}
+.btn-rouned {
+    color: #333;
+    border: 1px solid #d3d3d3;
+    border-radius: 35px;
+    padding: 7px 25px;
+    margin: 10px;
+    background: #fff;
+}
+.fiter-options > span {
+    margin: 0px 10px;
+    color: grey;
+    font-weight: bold;
+}
+.fiter-options > .custom-control{
+    display: inline !important;
+}
+.fiter-options .filter-list{
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 10px;
+    color: blue;
+}
+.job-card{
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #ddd;
+    margin: 20px 0px;
+    padding: 10px 0px;
+}
+.job-card .profile{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 0px;
+    text-transform: uppercase;
+}
+.job-card .job-type{
+    font-size: 11px;
+    color: grey;
+    margin: 0px;
+}
+.job-card .comp-logo{
+    margin: 4px 8px;
+}
+.job-card .btn-custom{
+    padding: 7px 15px;
+    margin: 0px 5px;
+    font-size: 14px;
+}
+.inline{
+    display: inline-block !important;
+    vertical-align: -webkit-baseline-middle;
+}
+.fa-purple{
+    color: #8213e7 !important;
+}
+.profile-details .title{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.profile-details .package{
+    font-weight: bold;
+    font-size: 18px;
+}
+.pl-15{
+    padding-left: 15px !important;
+}
+.benefits .fas, .benefits .far{
+    font-size: 50px;
+    color: #00d0ff;
+}
+.benefits .item{
+    color: #00d0ff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 25px 0px;
+}
+.right-content .btn-apply{
+    background: #0149d1;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 20px;
+    border: 1px solid #0149d1;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+    opacity: 0.9;
+}
+.right-content .fa-custom, .right-content .fa-fb, .right-content .fa-twit, .right-content .fa-linkd{
+    padding-left: 0px;
+    padding-right: 20px;
+}
+.right-content .btn-share {
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+}
+.fa-fb{
+    color: #4267B2 !important;
+}
+.fa-twit{
+    color: #1DA1F2 !important;
+}
+.fa-linkd{
+    color: #0e76a8 !important;
+}
+.url-share .sub-title{
+    font-size: 13px;
+    color: grey;
+    line-height: 1.2;
+}
+.more-jobs .heading{
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+.more-jobs .title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.2;
+}
+.more-jobs .sub-title{
+    color: grey;
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 1.2;
+}
+

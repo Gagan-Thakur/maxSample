@@ -1,0 +1,23 @@
+#subscribe-section{
+    background: #dee0ff;
+    border-radius: 25px;
+    height: 300px;
+}
+#subscribe-section h1{
+    font-size: 34px;
+    font-weight: bold;
+    margin: 35px 0px;
+    line-height: 1.2;
+}
+#subscribe-section .input-group-text{
+    background: #fff;
+    height: 45px;
+    border: none !important;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#subscribe-section .input-group >.form-control{
+    border: 0px;
+    height: 45px;
+}

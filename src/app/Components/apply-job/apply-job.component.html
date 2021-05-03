@@ -1,0 +1,904 @@
+<app-header></app-header>
+<div id="browse-listing-section">
+    <div class="browser-listing-bg">
+        <div class="container">
+            <div class="main-heading-section">
+                <h1 class="title">Apply Job</h1>
+                <p class="sub-title">Home | Browse Jobs</p>
+            </div>
+        </div>
+    </div>
+    <div class="main-listing container" id="apply-job-section">
+        <div class="row">
+            <div class="col-12">
+                <div class="row search-section">
+                    
+                    <div class="col-12">
+                          <mat-horizontal-stepper labelPosition="bottom" #stepper [linear]="true">
+                            <mat-step [stepControl]="firstFormGroup" >
+                              <form [formGroup]="firstFormGroup" id="personal-details-form">
+                                <ng-template matStepLabel>Personal Details</ng-template>
+                                <p class="title">Personal Details</p>
+                                <div class="row upload-section">
+                                  <div class="col-md-3">
+                                      <!-- <h3>Choose File</h3>             -->
+                                      
+                                      <div *ngIf="fileUploadProgress">
+                                          Upload progress: {{ fileUploadProgress }}
+                                      </div>
+                                      <div class="upload-pic" *ngIf="!previewUrl">
+                                        <p>Upload Your Passport Size Photo</p>
+                                      </div>
+                                      <div class="image-preview mb-3" *ngIf="previewUrl">
+                                          <img [src]="previewUrl" height="300" width="240"/>                 
+                                      </div>
+                          
+                                      <div class="mb-3" *ngIf="uploadedFilePath">
+                                          {{uploadedFilePath}}
+                                      </div>
+                                      <div class="form-group">
+                                          <input class="input-file-btn" type="file" name="image" value="Browse Your File" (change)="fileProgress($event)" />
+                                      </div>
+                                      <!-- <div class="form-group">
+                                          <button class="btn btn-primary">Submit</button>
+                                      </div> -->
+                                  </div>
+                                  <div class="col-md-9 right-content">
+                                    <p>MaxJobs.in invite online application for Temparary Workman(TW) for automobile Company, Situated in Gurgaon/Manesar (Haryana) (Only for ITI candidates)</p>
+                                    <p>The Process of writing a job description requires having a clear understanding of the job's duties and responsibilities.
+                                      The job posting should also include a concise picture of the skills required for the position to attract qualitfied job candidates.
+                                      Organize the job description into five sections: Company information, Job description, Job Requirements, Benefits and a call to Action.
+                                      Be Sure to include keywords that will help make your job posting searchable. A well define job description will help attract qualified candidates as well as help reduce employee turnover in the long run. 
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="row form-input">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">First Name</label>
+                                      <input matInput formControlName="firstCtrlFirstName" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>Middle Name</label>
+                                      <input matInput formControlName="firstCtrlMiddleName">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>Last Name</label>
+                                      <input matInput formControlName="firstCtrlLastName">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Father Name</label>
+                                      <input matInput formControlName="fatherName" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Date of Birth</label>
+                                      <input matInput formControlName="dob" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Marital Status</label>
+                                      <input matInput formControlName="maritalStatus" required>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Email</label>
+                                      <input matInput formControlName="email" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Mobile Number</label>
+                                      <input matInput formControlName="mobile" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>Alternative Mobile Number</label>
+                                      <input matInput formControlName="altMobile">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Category</label>
+                                      <input matInput formControlName="category" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Adhaar Number</label>
+                                      <input matInput formControlName="adhaar" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>PAN Number</label>
+                                      <input matInput formControlName="pan">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Gender</label>
+                                      <input matInput formControlName="gender" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Blood Group</label>
+                                      <input matInput formControlName="blood" required>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Domicile State</label>
+                                      <input matInput formControlName="domicile" required>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="text-right mt-5">
+                                  <button mat-button matStepperNext class="btn-explore">Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="secondFormGroup">
+                              <form [formGroup]="secondFormGroup">
+                                <ng-template matStepLabel>Address</ng-template>
+                                <p class="title">Address Details</p>
+                                <p class="sameAs"><input type="checkbox"><span>Is this same as your adhaar address?</span></p>
+                                <p class="sub-title">Temparary Address</p>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>House Address</label>
+                                      <input matInput formControlName="houseAddress">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>Street/Village</label>
+                                      <input matInput formControlName="street">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>State</label>
+                                      <input matInput formControlName="state">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>District</label>
+                                      <input matInput formControlName="district">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>Pin Code</label>
+                                      <input matInput formControlName="pin">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <p class="sub-title">Permanent Address</p>
+                                <p class="sameAs"><input type="checkbox"><span>Same as Temparary address?</span></p>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>House Address</label>
+                                      <input matInput formControlName="houseAddress">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>Street/Village</label>
+                                      <input matInput formControlName="street">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>State</label>
+                                      <input matInput formControlName="state">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>District</label>
+                                      <input matInput formControlName="district">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label>Pin Code</label>
+                                      <input matInput formControlName="pin">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                
+                                <div class="text-right">
+                                  <button mat-button matStepperPrevious class="btn-grey">Back</button>
+                                  <button mat-button matStepperNext class="btn-explore">Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="thirdFormGroup">
+                              <form [formGroup]="thirdFormGroup">
+                                <ng-template matStepLabel>Education</ng-template>
+                                <p class="title">Education Details</p>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Course</label>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Start Month</label>
+                                      <input matInput formControlName="startMonth">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Start Year</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020" disabled>2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">End Month</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="jan">JAN</option>
+                                        <option value="feb">FEB</option>
+                                        <option value="mar">MARCH</option>
+                                        <option value="apr">APRIL</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">End Year</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">Regular/Correspondance</label>
+                                      <input matInput formControlName="passing">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">Result Status</label>
+                                      <input matInput formControlName="school">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">Obtain Marks</label>
+                                      <input matInput formControlName="obtMarks">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label>Total Marks</label>
+                                      <input matInput formControlName="totalMarks">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label>Passing %</label>
+                                      <input matInput formControlName="passing">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label>Name of School</label>
+                                      <input matInput formControlName="school">
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-6">
+                                    <mat-form-field>
+                                      <label class="mendatory">School Location</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="jan">DELHI</option>
+                                        <option value="feb">NCR</option>
+                                        <option value="mar">GURGAON</option>
+                                        <option value="apr">NOIDA</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <mat-form-field>
+                                      <label class="mendatory">Board</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">CBSE</option>
+                                        <option value="2020">NCERT</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="text-right mt-5">
+                                  <button mat-button matStepperPrevious class="btn-grey">Back</button>
+                                  <button mat-button matStepperNext class="btn-explore">Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="fourthFormGroup">
+                              <form [formGroup]="fourthFormGroup">
+                                <ng-template matStepLabel>Apprenticeship</ng-template>
+                                <p class="title">Apprenticeship</p>
+                                <p class="skip">**Skip if not applicable</p>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Company Name</label>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Company Location</label>
+                                      <input matInput formControlName="startMonth">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Stipend</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Department</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Start Month</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Start Year</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4 offset-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">End Month</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">End Year</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="text-right mt-5">
+                                  <button mat-button matStepperPrevious class="btn-grey">Back</button>
+                                  <button mat-button matStepperNext class="btn-explore">Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="fourthFormGroup">
+                              <form [formGroup]="fourthFormGroup">
+                                <ng-template matStepLabel>Work Experience</ng-template>
+                                <p class="title">Work Experience</p>
+                                <!-- <p class="skip">**Skip if not applicable</p> -->
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Company Name</label>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Department</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="it">IT</option>
+                                        <option value="hr">HR</option>
+                                        <option value="accounts">Accounts</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">Location</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Gurgaon">Gurgaon</option>
+                                        <option value="noida">Noida</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">Nature of Job</label>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">Salary Per Month</label>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">Start Month</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <label class="mendatory">Start Year</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">End Month</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <mat-form-field>
+                                      <label class="mendatory">End Year</label>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-4">
+                                    <input type="checkbox"><span> Check if as present</span>
+                                  </div>
+                                </div>
+                                <div class="text-right mt-5">
+                                  <button mat-button matStepperPrevious class="btn-grey">Back</button>
+                                  <button mat-button matStepperNext class="btn-explore">Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="fifthFormGroup">
+                              <form [formGroup]="fifthFormGroup">
+                                <ng-template matStepLabel>Family Details</ng-template>
+                                <p class="title">Family Details</p>
+                                <!-- <p class="skip">**Skip if not applicable</p> -->
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-3 offset-2">
+                                      <label>Full Name</label>
+                                  </div>
+                                  <div class="col-md-1">
+                                      <label>Age</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <label>Occupation</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                      <label>Annual Income</label>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-2">
+                                    <label class="mendatory">Father Name</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-1">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">20-25</option>
+                                        <option value="2020">25-30</option>
+                                        <option value="2019">30-35</option>
+                                        <option value="2018">36-40</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected>Select</option>
+                                        <option value="2021">20L-25L</option>
+                                        <option value="2020">25L-30L</option>
+                                        <option value="2019">30L-35L</option>
+                                        <option value="2018">36L-40L</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-2">
+                                    <label class="mendatory">Mother Name</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-1">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">20-25</option>
+                                        <option value="2020">25-30</option>
+                                        <option value="2019">30-35</option>
+                                        <option value="2018">36-40</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected>Select</option>
+                                        <option value="2021">20L-25L</option>
+                                        <option value="2020">25L-30L</option>
+                                        <option value="2019">30L-35L</option>
+                                        <option value="2018">36L-40L</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-2">
+                                    <label class="mendatory">Wife</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-1">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">20-25</option>
+                                        <option value="2020">25-30</option>
+                                        <option value="2019">30-35</option>
+                                        <option value="2018">36-40</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected>Select</option>
+                                        <option value="2021">20L-25L</option>
+                                        <option value="2020">25L-30L</option>
+                                        <option value="2019">30L-35L</option>
+                                        <option value="2018">36L-40L</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-2">
+                                    <label class="mendatory">Children</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-1">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">20-25</option>
+                                        <option value="2020">25-30</option>
+                                        <option value="2019">30-35</option>
+                                        <option value="2018">36-40</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected>Select</option>
+                                        <option value="2021">20L-25L</option>
+                                        <option value="2020">25L-30L</option>
+                                        <option value="2019">30L-35L</option>
+                                        <option value="2018">36L-40L</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-2">
+                                    <label class="mendatory">Brother</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-1">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">20-25</option>
+                                        <option value="2020">25-30</option>
+                                        <option value="2019">30-35</option>
+                                        <option value="2018">36-40</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected>Select</option>
+                                        <option value="2021">20L-25L</option>
+                                        <option value="2020">25L-30L</option>
+                                        <option value="2019">30L-35L</option>
+                                        <option value="2018">36L-40L</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-2">
+                                    <label class="mendatory">Sister</label>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-1">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected></option>
+                                        <option value="2021">20-25</option>
+                                        <option value="2020">25-30</option>
+                                        <option value="2019">30-35</option>
+                                        <option value="2018">36-40</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <input matInput formControlName="course">
+                                    </mat-form-field>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <mat-form-field>
+                                      <select matNativeControl [disabled]="disableSelect.value">
+                                        <option value="" selected>Select</option>
+                                        <option value="2021">20L-25L</option>
+                                        <option value="2020">25L-30L</option>
+                                        <option value="2019">30L-35L</option>
+                                        <option value="2018">36L-40L</option>
+                                      </select>
+                                    </mat-form-field>
+                                  </div>
+                                </div>
+                                <div class="text-right mt-5">
+                                  <button mat-button matStepperPrevious class="btn-grey">Back</button>
+                                  <button mat-button matStepperNext class="btn-explore">Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [stepControl]="sixthFormGroup">
+                              <form [formGroup]="sixthFormGroup" id="doc-form">
+                                <ng-template matStepLabel>Documents</ng-template>
+                                <p class="title">Upload Your Documents</p>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-6">
+                                    <label>Adhaar Card Front Side</label>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label>Adhaar Card Back Side</label>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-6">
+                                    <label>10th Marksheet</label>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label>12th Marksheet</label>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row form-input mt-4">
+                                  <div class="col-md-6">
+                                    <label>Diploma (ITI)</label>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label>PAN card</label>
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                        aria-describedby="inputGroupFileAddon01">
+                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="text-right mt-5">
+                                  <button mat-button matStepperPrevious class="btn-grey">Back</button>
+                                  <button mat-button matStepperNext class="btn-explore">Next</button>
+                                </div>
+                              </form>
+                            </mat-step>
+                            <mat-step [completed]="completed" [state]="state">
+                              <ng-template matStepLabel>Others</ng-template>
+                              <h1>You are now done.</h1>
+                              <div class="text-right mt-5">
+                                <button mat-button matStepperPrevious class="btn-grey">Back</button>
+                                <button mat-button (click)="done()" class="btn-explore">Confirm</button>
+                              </div>
+                            </mat-step>
+                          </mat-horizontal-stepper>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
+
